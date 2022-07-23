@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
-import pic from '../../public/pic.png'
+import pic from '../../public/pic.jpg'
 import { BsCardImage, BsEmojiSmile } from 'react-icons/bs'
 import { RiFileGifLine, RiBarChartHorizontalFill } from 'react-icons/ri'
 import { IoMdCalendar } from 'react-icons/io'
@@ -31,9 +31,11 @@ const TweetBox = () => {
   return (
     <div className={style.wrapper}>
         <div className={style.tweetBoxLeft}>
-            <img
+            <Image
                 src={pic}
                 alt="profile image"
+                width={50}
+                height={50}
                 className={style.profileImage}
             />
         </div>
