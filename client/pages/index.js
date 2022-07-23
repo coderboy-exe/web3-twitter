@@ -1,3 +1,4 @@
+import HomeFeed from "../components/home/HomeFeed"
 import Sidebar from "../components/Sidebar"
 
 const style = {
@@ -11,7 +12,7 @@ export default function Home() {
       <div className={style.content}>
 
         <Sidebar />
-        <h2>Feed</h2>
+        <HomeFeed />
         <h2>Widgets</h2>
 
       </div>
