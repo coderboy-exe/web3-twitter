@@ -49,7 +49,7 @@ const Post = ({ displayName, userName, text, avatar, isProfileImageNft, timestam
                     </span>)}
 
                     <span className={style.handleAndTimeAgo}>
-                        @{ userName } * { format(new Date(timestamp).getTime()) }
+                        @{ userName } • { format(new Date(timestamp).getTime()) }
                     </span>
                 </span>
 
