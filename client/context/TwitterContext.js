@@ -4,10 +4,10 @@ import { useRouter } from 'next/router'
 export const TwitterContext = createContext()
 
 export const TwitterProvider = ({ children }) => {
-    const [appStatus, setAppStatus] = useState();
+    const [appStatus, setAppStatus] = useState('');
     const [currentAccount, setCurrentAccount] = useState('')
 
-    const router = useRouter
+    const router = useRouter()
 
     useEffect(() => {
       checkIfWalletIsConnected ()
@@ -46,6 +46,7 @@ export const TwitterProvider = ({ children }) => {
             })
             if (addressArray.length > 0) {
                 setCurrentAccount(addressArray[0])
+                setAppStatus('connected')
             } else {
                 router.push('/')
                 setAppStatus('notConnected')
